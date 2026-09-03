@@ -3,7 +3,7 @@
 import Link from "next/link";
 import { useState } from "react";
 import { AppointmentLink } from "@/components/AppointmentLink";
-import { LeafMark } from "@/components/Icons";
+import { BrandMark } from "@/components/BrandMark";
 import { navItems, site } from "@/lib/site";
 import { btnGhost, btnPrimary } from "@/lib/styles";
 
@@ -21,7 +21,7 @@ export function Header() {
       </a>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex min-h-11 items-center gap-3">
-          <LeafMark className="h-10 w-10" />
+          <BrandMark className="h-11 w-11" priority />
           <span className="leading-tight">
             <span className="block font-serif text-base text-sage-dark">
               {site.shortName}

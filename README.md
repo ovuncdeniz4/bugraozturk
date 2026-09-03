@@ -18,7 +18,7 @@ npm run dev
 
 Numara yoksa randevu butonları Instagram DM’e (`ig.me`) düşer. WhatsApp numarasını Vercel’e ekleyip yeniden deploy edin.
 
-Portre fotoğrafı için `public/bugra-ozturk.jpg` ekleyip yeniden yayınlayın.
+Portre fotoğrafı için `public/bugra-ozturk.jpg` ekleyip yeniden yayınlayın. Logo: `public/logo.png`.
 
 ## Sayfalar
 
