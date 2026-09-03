@@ -6,7 +6,7 @@ import { btnPrimary } from "@/lib/styles";
 /** Sayfa sonu — tek aksiyon: WhatsApp randevu. */
 export function CtaBand() {
   return (
-    <section className="px-4 pb-24 md:pb-16">
+    <section className="px-4 pb-16">
       <div className="mx-auto max-w-6xl rounded-[2rem] bg-sage-dark px-6 py-10 text-cream sm:px-10">
         <h2 className="font-serif text-3xl">Hazırsanız birlikte başlayalım.</h2>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-sand">

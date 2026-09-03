@@ -6,7 +6,7 @@ import { site } from "@/lib/site";
 /** Alt bilgi — adres, yazılar, sosyal ve KVKK. */
 export function Footer() {
   return (
-    <footer className="border-t border-sand bg-cream pb-20 md:pb-0">
+    <footer className="border-t border-sand bg-cream">
       <div className="mx-auto flex max-w-6xl flex-col gap-8 px-4 py-10 sm:px-6 md:flex-row md:justify-between">
         <div className="flex items-start gap-3">
           <BrandMark className="h-11 w-11" />
