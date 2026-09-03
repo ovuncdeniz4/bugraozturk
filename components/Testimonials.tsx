@@ -1,19 +1,19 @@
 const quotes = [
   {
-    tag: "Kilo yönetimi",
-    text: "Aç kalmadan, kendi mutfağıma uygun listelerle ilerledim. Diyet değil, oturan bir düzen hissedildi.",
+    text: "Buğra Bey oldukça ilgili bir diyetisyen. Danışanının söylediklerini dinliyor. Kişiye özel listeler yapması çok güzel.",
   },
   {
-    tag: "Ulaşılabilirlik",
-    text: "Sorularıma hızlı dönüş aldım. Süreç yargılamadan, esnek alternatiflerle yürüdü.",
+    text: "Kasım ayından beri çalışıyorum. O zamandan bu zamana kadar 15 kilo verdim ve çok mutluyum. Diyet listelerimi uygularken zorluk yaşamadım.",
   },
   {
-    tag: "Online takip",
-    text: "Şehir dışında olsam da haftalık planlar ve tartı takibiyle tempo bozulmadı.",
+    text: "3 aydır beslenme sistemim oturdu ve kendimi daha konforlu hissediyorum. Sayılara takılmadan beslenerek kilo veriyorum.",
   },
 ] as const;
 
-/** İsimsiz deneyim özetleri — sahte isim veya sonuç eklenmez. */
+const doktorTakvimiUrl =
+  "https://www.doktortakvimi.com/bugra-ozturk/diyetisyen/aydin";
+
+/** DoktorTakvimi’de yayımlanmış kısa danışan alıntıları. */
 export function Testimonials() {
   return (
     <section id="yorumlar" className="scroll-mt-24 bg-cream/60">
@@ -22,26 +22,31 @@ export function Testimonials() {
           Danışan deneyimi
         </p>
         <h2 className="mt-2 max-w-xl font-serif text-3xl text-sage-dark">
-          Süreç nasıl hissediliyor?
+          DoktorTakvimi’den yorumlar
         </h2>
         <div className="mt-8 grid gap-3 md:grid-cols-3">
           {quotes.map((quote) => (
             <blockquote
-              key={quote.tag}
+              key={quote.text.slice(0, 24)}
               className="rounded-[1.5rem] border border-sand bg-background p-5"
             >
-              <p className="text-xs font-semibold tracking-wide text-sage uppercase">
-                {quote.tag}
-              </p>
-              <p className="mt-3 text-base leading-relaxed text-sage-dark">
+              <p className="text-base leading-relaxed text-sage-dark">
                 “{quote.text}”
               </p>
             </blockquote>
           ))}
         </div>
         <p className="mt-5 text-xs text-muted">
-          Bu kartlar sık dile getirilen deneyimleri özetler. İsim, yaş veya
-          sonuç paylaşımları yalnızca danışan onayıyla eklenir.
+          Alıntılar{" "}
+          <a
+            href={doktorTakvimiUrl}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline underline-offset-2 hover:text-sage-dark"
+          >
+            doktortakvimi.com
+          </a>{" "}
+          üzerindeki danışan yorumlarından alınmıştır.
         </p>
       </div>
     </section>

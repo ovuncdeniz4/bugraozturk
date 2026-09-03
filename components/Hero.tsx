@@ -3,7 +3,7 @@ import { AppointmentLink } from "@/components/AppointmentLink";
 import { Portrait } from "@/components/Portrait";
 import { btnPrimary, btnSecondary } from "@/lib/styles";
 
-/** Mobilde fotoğraf üstte; webde fotoğraf solda, metin sağda. */
+/** Mobilde fotoğraf üstte; webde fotoğraf solda, slogan sağda. */
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
@@ -13,12 +13,12 @@ export function Hero() {
           priority
         />
         <div className="text-center lg:text-left">
-          <h1 className="font-serif text-3xl leading-tight text-sage-dark sm:text-4xl">
-            Yasaksız, kişiye özel beslenme
+          <h1 className="font-serif text-3xl leading-tight text-sage-dark sm:text-4xl lg:text-5xl">
+            Diyette yasaklara yer yok!
           </h1>
-          <p className="mx-auto mt-4 max-w-lg text-base leading-relaxed text-muted sm:text-lg lg:mx-0">
-            Aç kalmadan, günlük hayatınıza uygun ve sürdürülebilir bir beslenme
-            düzeni oluşturalım.
+          <p className="mx-auto mt-4 max-w-lg text-sm leading-relaxed text-muted sm:text-base lg:mx-0">
+            Aç kalmadan, günlük rutinlerinize uygun kalıcı alışkanlıklar inşa
+            ediyoruz.
           </p>
           <div className="mt-7 flex flex-wrap justify-center gap-3 lg:justify-start">
             <AppointmentLink className={btnPrimary}>Randevu Al</AppointmentLink>

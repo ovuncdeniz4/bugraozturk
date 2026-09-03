@@ -1,39 +1,35 @@
 const services = [
   {
     title: "Kilo Verme Danışmanlığı",
-    body: "Aç kalmadan, günlük hayatınıza uyan planlarla kilo vermenize eşlik ederim. Aydın’da yüz yüze veya online takip mümkündür.",
+    body: "Öncelikle sizi dinlerim. Nasıl bir hayatınız var, beslenme alışkanlıklarınız ve imkanlarınız neler, nelerden hoşlanırsınız gibi size özgü bilgileri toplarım. Daha sonra sizin hayatınıza en uygun beslenme programını kurgular ve takibe başlarım.",
   },
   {
     title: "Kilo Alma Danışmanlığı",
-    body: "Sağlıklı kilo almak için öğün düzeni ve uygulanabilir listelerle ilerleriz. Ezbere “çok ye” yaklaşımı yoktur.",
+    body: "Kilo almak vermeye göre daha zor geliyorsa evet haklı olabilirsin. Çünkü bir yapıyı inşa etmek, yıkmaya göre çoğunlukla daha zordur ve zaman alır. İnşa sürecinde desteğe ihtiyacın varsa elimden geleni yapmaya hazırım.",
   },
   {
     title: "Sporcu Beslenmesi",
-    body: "Antrenman temposuna göre enerji ve toparlanma planı. Aydın’da sporcu beslenmesi danışmanlığı ofiste veya uzaktan yürür.",
+    body: "Voleybol, basketbol, futbol, tenis ve yüzme branşlarında çok sayıda sporcuya beslenme danışmanlığı hizmeti vermiş olmanın tecrübesi ile tamamen antrenman ve müsabaka programına göre doğru beslenme ile performans artışı hedefliyoruz.",
   },
   {
-    title: "İnsülin Direncinde Beslenme",
-    body: "Öğün düzeni ve sürdürülebilir alışkanlıklarla destekleyici bir plan kurarız. Tanı ve tedavi hekim kararıdır.",
+    title: "İnsülin Direnci, Tansiyon, Kolesterol",
+    body: "Düzensiz beslenme ve hayat tarzının getirmiş olduğu sağlıksız durumları doğru müdahale ve yöntemlerle, mümkünse ilaçsız veya ilaçlı şekilde, hayatınızdan çıkarmak üzere çalışıyoruz. İlaç kararı hekime aittir.",
   },
   {
-    title: "Diyabette Beslenme",
-    body: "Tip 1 ve tip 2 diyabette, hekim takibinizle uyumlu beslenme danışmanlığı. Liste size ve rutininize göre yazılır.",
+    title: "Tiroid Hastalıkları, Hashimoto, Graves",
+    body: "Tiroid hastalıklarında doğru ilaç tedavisi ve beslenme desteği ile hayatınıza minimum negatif etki göstermesi için uğraşıyor; yeni alışkanlıklarla metabolik döngüyü desteklemeyi hedefliyoruz.",
   },
   {
-    title: "Hashimoto ve Tiroid Beslenmesi",
-    body: "Tiroid sürecinde uygulanabilir, kişiye özel bir beslenme düzeni. Sert yasak listeleri yerine dengeyi konuşuruz.",
+    title: "PKOS",
+    body: "Kadınlarda sık karşılaştığımız metabolik tablolardan biri olan PKOS, yanlış beslenme alışkanlıklarıyla birlikte seyrettiğinde hayat kalitesini düşürebilir. Doğru beslenme ve takviye desteği ile süreci birlikte yönetmek mümkündür.",
   },
   {
-    title: "Online Diyetisyen",
-    body: "Aydın dışında olsanız da görüşme, liste ve takip uzaktan devam eder. Şehir bağımsız danışmanlık mümkündür.",
-  },
-  {
-    title: "Sürdürülebilir Beslenme",
-    body: "Kısa süreli detoks değil; koruyabileceğiniz bir yaşam düzeni. Amaç, diyet bittikten sonra da devam edebilmektir.",
+    title: "Online Diyet",
+    body: "Online diyet ile yüz yüze diyet arasındaki tek fark evde tartılmak. Görüşme süresi, sıklığı ve yakın takip yüz yüze süreçle aynıdır. Park yeri, mesafe ve iş çıkışı koşturmasından bağımsız ilerlemek isteyenler için özellikle büyükşehirlerden tercih ediliyor.",
   },
 ] as const;
 
-/** Kullanıcıların aradığı hizmet adları; andülasyon geri planda. */
+/** Hizmet kartları — andülasyon yok; tahlil notu ayrı renkte. */
 export function Services() {
   return (
     <section id="hizmetler" className="scroll-mt-24 bg-cream/60">
@@ -55,9 +51,9 @@ export function Services() {
             </article>
           ))}
         </div>
-        <p className="mt-6 text-xs leading-relaxed text-muted">
-          Ofiste, beslenme danışmanlığına ek olarak andülasyon desteği de
-          sunulabilir. Ana çalışma alanı kişiye özel beslenme planıdır.
+        <p className="mt-6 text-sm leading-relaxed text-clay">
+          Tüm danışmanlık süreçlerinde başlangıçta güncel kan tahlili verilmesi
+          zorunludur.
         </p>
       </div>
     </section>
