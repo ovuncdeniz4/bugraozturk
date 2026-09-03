@@ -2,29 +2,6 @@ import type { SVGProps } from "react";
 
 type IconProps = SVGProps<SVGSVGElement>;
 
-export function LeafMark({ className }: { className?: string }) {
-  return (
-    <svg
-      viewBox="0 0 40 40"
-      className={className}
-      aria-hidden="true"
-      fill="none"
-    >
-      <rect width="40" height="40" rx="12" fill="#4d6b57" />
-      <path
-        d="M27.5 12.5c-6.5.4-12 5.2-13.8 11.4-.4 1.4.8 2.6 2.2 2.4 5.8-.8 10.6-5.4 12.2-11.2.3-1.1-.7-2.2-1.8-2.6Z"
-        fill="#f6f1e8"
-      />
-      <path
-        d="M16.2 22.8c2.4-1.8 6.4-4.6 10.6-5.6"
-        stroke="#4d6b57"
-        strokeWidth="1.4"
-        strokeLinecap="round"
-      />
-    </svg>
-  );
-}
-
 export function InstagramIcon(props: IconProps) {
   return (
     <svg viewBox="0 0 24 24" fill="none" aria-hidden="true" {...props}>

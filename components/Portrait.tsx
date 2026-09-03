@@ -1,7 +1,7 @@
 import { existsSync } from "node:fs";
 import { join } from "node:path";
 import Image from "next/image";
-import { LeafMark } from "@/components/Icons";
+import { BrandMark } from "@/components/BrandMark";
 import { site } from "@/lib/site";
 
 const portraitFile = "bugra-ozturk.jpg";
@@ -32,7 +32,7 @@ export function Portrait({
         />
       ) : (
         <div className="flex h-full min-h-[280px] flex-col items-center justify-center gap-4 px-6 text-center">
-          <LeafMark className="h-16 w-16" />
+          <BrandMark className="h-24 w-24" />
           <div>
             <p className="font-serif text-2xl text-sage-dark">{site.name}</p>
             <p className="mt-1 text-sm text-muted">

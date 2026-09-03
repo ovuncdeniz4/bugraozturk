@@ -44,7 +44,7 @@ export function JsonLd() {
       name: site.name,
       description: site.description,
       url,
-      image: `${url}/opengraph-image`,
+      image: `${url}/logo.png`,
       address,
       areaServed: { "@type": "City", name: "Aydın" },
       sameAs: [site.instagramUrl, site.linkedinUrl, site.mapsUrl],
