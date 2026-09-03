@@ -4,7 +4,7 @@ import { site } from "@/lib/site";
 export function JsonLd() {
   const data = {
     "@context": "https://schema.org",
-    "@type": "MedicalBusiness",
+    "@type": ["LocalBusiness", "MedicalBusiness"],
     name: site.name,
     description: site.description,
     url: process.env.NEXT_PUBLIC_SITE_URL ?? "https://bugraozturk.vercel.app",
