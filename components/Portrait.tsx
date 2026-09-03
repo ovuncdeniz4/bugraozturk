@@ -14,8 +14,10 @@ function portraitPath(): string | null {
 /** Profesyonel portre alanı — `public/bugra-ozturk.jpg` eklenince otomatik görünür. */
 export function Portrait({
   className = "h-[380px] sm:h-[440px]",
+  priority = false,
 }: {
   className?: string;
+  priority?: boolean;
 }) {
   const src = portraitPath();
 
@@ -27,8 +29,8 @@ export function Portrait({
           alt={`${site.name}, Aydın diyetisyen`}
           fill
           sizes="(max-width: 768px) 100vw, 480px"
-          className="object-cover object-top"
-          priority
+          className="object-cover object-[center_15%]"
+          priority={priority}
         />
       ) : (
         <div className="flex h-full min-h-[280px] flex-col items-center justify-center gap-4 px-6 text-center">
