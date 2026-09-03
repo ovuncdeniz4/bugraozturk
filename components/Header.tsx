@@ -22,11 +22,8 @@ export function Header() {
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
         <Link href="/" className="flex min-h-11 items-center gap-3">
           <BrandMark className="h-11 w-11" priority />
-          <span className="leading-tight">
-            <span className="block font-serif text-base text-sage-dark">
-              {site.shortName}
-            </span>
-            <span className="block text-xs text-muted">Aydın diyetisyen</span>
+          <span className="font-serif text-base text-sage-dark">
+            Diyetisyen {site.shortName}
           </span>
         </Link>
 
