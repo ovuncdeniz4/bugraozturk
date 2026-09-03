@@ -2,11 +2,12 @@
 
 import Link from "next/link";
 import { useState } from "react";
+import { AppointmentLink } from "@/components/AppointmentLink";
 import { LeafMark } from "@/components/Icons";
 import { navItems, site } from "@/lib/site";
 import { btnGhost, btnPrimary } from "@/lib/styles";
 
-/** Sabit üst menü — masaüstünde satır, mobilde açılır liste. */
+/** Sabit üst menü — randevu WhatsApp’a gider. */
 export function Header() {
   const [open, setOpen] = useState(false);
 
@@ -19,35 +20,30 @@ export function Header() {
         İçeriğe geç
       </a>
       <div className="mx-auto flex max-w-6xl items-center justify-between gap-4 px-4 py-3 sm:px-6">
-        <Link href="/" className="flex items-center gap-3 min-h-11">
+        <Link href="/" className="flex min-h-11 items-center gap-3">
           <LeafMark className="h-10 w-10" />
           <span className="leading-tight">
             <span className="block font-serif text-base text-sage-dark">
               {site.shortName}
             </span>
-            <span className="block text-xs text-muted">{site.profession}</span>
+            <span className="block text-xs text-muted">Aydın diyetisyen</span>
           </span>
         </Link>
 
-        <nav className="hidden items-center gap-1 md:flex" aria-label="Ana menü">
+        <nav className="hidden items-center gap-0.5 lg:flex" aria-label="Ana menü">
           {navItems.map((item) => (
             <Link key={item.href} href={item.href} className={btnGhost}>
               {item.label}
             </Link>
           ))}
-          <a
-            href={site.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${btnPrimary} ml-2`}
-          >
+          <AppointmentLink className={`${btnPrimary} ml-2`}>
             Randevu Al
-          </a>
+          </AppointmentLink>
         </nav>
 
         <button
           type="button"
-          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-sand md:hidden"
+          className="inline-flex min-h-11 min-w-11 items-center justify-center rounded-full border border-sand lg:hidden"
           aria-expanded={open}
           aria-controls="mobil-menu"
           onClick={() => setOpen((value) => !value)}
@@ -64,28 +60,23 @@ export function Header() {
       {open ? (
         <nav
           id="mobil-menu"
-          className="border-t border-sand px-4 py-3 md:hidden"
+          className="border-t border-sand px-4 py-3 lg:hidden"
           aria-label="Mobil menü"
         >
-          <div className="flex flex-col gap-1">
+          <div className="flex flex-col gap-1 pb-2">
             {navItems.map((item) => (
               <Link
                 key={item.href}
                 href={item.href}
-                className={btnGhost + " justify-start"}
+                className={`${btnGhost} justify-start`}
                 onClick={() => setOpen(false)}
               >
                 {item.label}
               </Link>
             ))}
-            <a
-              href={site.mapsUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className={`${btnPrimary} mt-2`}
-            >
+            <AppointmentLink className={`${btnPrimary} mt-2`}>
               Randevu Al
-            </a>
+            </AppointmentLink>
           </div>
         </nav>
       ) : null}
