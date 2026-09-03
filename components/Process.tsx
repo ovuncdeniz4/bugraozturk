@@ -2,26 +2,26 @@ const steps = [
   {
     n: "01",
     title: "Tanışma",
-    body: "Hedeflerinizi, beslenme alışkanlıklarınızı ve günlük rutininizi değerlendiriyoruz.",
+    body: "İlk seansta yaklaşık 30–45 dk arası hayatınızı, rutinlerinizi, beslenme alışkanlıklarınızı, ailenizi ve hayatınızı etkileyen yakın ilişkilerinizi, çalışma veya eğitim sürecinizi konuşuyoruz. Çünkü beslenme bir rutin işidir.",
   },
   {
     n: "02",
     title: "Kişiye Özel Plan",
-    body: "Sevdiğiniz yiyecekleri, yaşam temponuzu ve hedeflerinizi dikkate alan bir plan oluşturuyoruz.",
+    body: "Sevdiğiniz yiyecekleri, günlük temponuzu ve imkanlarınızı dikkate alan bir beslenme programı hazırlıyoruz.",
   },
   {
     n: "03",
     title: "Düzenli Takip",
-    body: "Geri bildirimlerinizi değerlendiriyor, ölçümlerinizi takip ediyor ve gerektiğinde planı güncelliyoruz.",
+    body: "Yediğiniz öğünleri WhatsApp üzerinden iletmenizi istiyorum. Hafta boyunca attığınız görselleri bir sonraki seansta değerlendirmeye önem veriyorum.",
   },
   {
     n: "04",
     title: "Sürdürülebilir Sonuç",
-    body: "Amaç yalnızca kilo vermek değil, uzun vadede sürdürülebilir bir beslenme düzeni oluşturmak.",
+    body: "Her hafta görüşmelerimizde haftanın doğrularını, yanlışlarını, daha iyi neler yapabileceğimizi ve sonuçları birlikte değerlendiriyor; size en uygun beslenme düzenini birlikte inşa ediyoruz.",
   },
 ] as const;
 
-/** Dört aşamalı süreç — hero’daki “Nasıl Çalışıyoruz?” hedefi. */
+/** Dört aşamalı süreç. */
 export function Process() {
   return (
     <section id="surec" className="scroll-mt-24">
