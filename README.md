@@ -1,6 +1,6 @@
 # Dyt. Buğra Öztürk
 
-Aydın Efeler’deki diyetisyen ofisi için tanıtım sitesi. Randevu Google Haritalar’a, mesaj Instagram / WhatsApp’a yönlenir.
+Aydın Efeler’deki diyetisyen ofisi için tanıtım sitesi. Ana randevu aksiyonu WhatsApp’tır.
 
 ## Geliştirme
 
@@ -9,17 +9,19 @@ npm install
 npm run dev
 ```
 
-## Vercel
+## Vercel ortam değişkenleri
 
-Bu repo Next.js App Router kullanır. Vercel’de **Import Git Repository** ile `ovuncdeniz4/bugraozturk` bağlanır; framework otomatik algılanır.
+| Değişken | Zorunlu | Açıklama |
+|---|---|---|
+| `NEXT_PUBLIC_SITE_URL` | Hayır | Canlı adres. Sitemap, canonical ve Open Graph için. |
+| `NEXT_PUBLIC_WHATSAPP_NUMBER` | Randevu için evet | Ülke koduyla, işaretsiz. Örnek: `905xxxxxxxxx` |
 
-İsteğe bağlı ortam değişkeni:
+Numara yoksa randevu butonları Instagram DM’e (`ig.me`) düşer. WhatsApp numarasını Vercel’e ekleyip yeniden deploy edin.
 
-- `NEXT_PUBLIC_SITE_URL` — canlı alan adı (`https://...`). Sitemap ve Open Graph için.
-
-WhatsApp numarası gelince [`lib/site.ts`](lib/site.ts) içinde `whatsappNumber` alanını `905xxxxxxxxx` formatında doldurun.
+Portre fotoğrafı için `public/bugra-ozturk.jpg` ekleyip yeniden yayınlayın.
 
 ## Sayfalar
 
 - `/` vitrin
-- `/kvkk` kısa aydınlatma metni
+- `/blog` yazı listesi (`lib/blog.ts`)
+- `/kvkk` aydınlatma

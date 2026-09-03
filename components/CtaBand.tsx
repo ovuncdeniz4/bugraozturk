@@ -1,53 +1,25 @@
-import { InstagramIcon, WhatsAppIcon } from "@/components/Icons";
-import { chatIsWhatsapp, site, whatsappUrl } from "@/lib/site";
-import { btnSecondary } from "@/lib/styles";
+import { AppointmentLink } from "@/components/AppointmentLink";
+import { WhatsAppIcon } from "@/components/Icons";
+import { site } from "@/lib/site";
+import { btnPrimary } from "@/lib/styles";
 
-/** Sayfa sonu çağrı bandı — randevu Maps, sohbet WhatsApp veya Instagram. */
+/** Sayfa sonu — tek aksiyon: WhatsApp randevu. */
 export function CtaBand() {
-  const chatHref = whatsappUrl();
-  const chatLabel = chatIsWhatsapp() ? "WhatsApp ile yazın" : "Instagram’dan yazın";
-
   return (
-    <section className="px-4 pb-16 sm:px-6">
-      <div className="mx-auto max-w-6xl overflow-hidden rounded-[2rem] bg-sage-dark px-6 py-12 text-cream sm:px-10">
-        <h2 className="font-serif text-3xl sm:text-4xl">
-          İlk adım bir görüşme.
-        </h2>
+    <section className="px-4 pb-24 md:pb-16">
+      <div className="mx-auto max-w-6xl rounded-[2rem] bg-sage-dark px-6 py-10 text-cream sm:px-10">
+        <h2 className="font-serif text-3xl">Hazırsanız birlikte başlayalım.</h2>
         <p className="mt-3 max-w-xl text-sm leading-relaxed text-sand">
-          Randevu için Google Haritalar’daki ofis sayfasını kullanın. Kısa bir
-          soru için Instagram veya WhatsApp üzerinden yazabilirsiniz.
+          Kendinize uygun, sürdürülebilir bir beslenme düzeni oluşturmak için
+          ilk adımı atın.
         </p>
-        <div className="mt-8 flex flex-wrap gap-3">
-          <a
-            href={site.mapsUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center justify-center rounded-full bg-clay px-6 py-3 text-sm font-semibold text-white hover:bg-clay-dark"
-          >
-            Randevu Al
-          </a>
-          <a
-            href={chatHref}
-            target="_blank"
-            rel="noopener noreferrer"
-            className="inline-flex min-h-11 items-center justify-center gap-2 rounded-full bg-cream px-6 py-3 text-sm font-semibold text-sage-dark hover:bg-sand"
-          >
-            {chatIsWhatsapp() ? (
-              <WhatsAppIcon className="h-4 w-4" />
-            ) : (
-              <InstagramIcon className="h-4 w-4" />
-            )}
-            {chatLabel}
-          </a>
-          <a
-            href={site.instagramUrl}
-            target="_blank"
-            rel="noopener noreferrer"
-            className={`${btnSecondary} border-white/20 bg-transparent text-cream hover:bg-white/10`}
-          >
-            {site.instagramHandle}
-          </a>
-        </div>
+        <AppointmentLink className={`${btnPrimary} mt-7`}>
+          <WhatsAppIcon className="h-4 w-4" />
+          WhatsApp’tan Randevu Al
+        </AppointmentLink>
+        <p className="mt-4 text-sm text-sand">
+          📍 {site.city} / {site.district}
+        </p>
       </div>
     </section>
   );

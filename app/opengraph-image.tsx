@@ -19,11 +19,11 @@ export default function OpenGraphImage() {
           color: "#354a3c",
         }}
       >
-        <div style={{ fontSize: 28, color: "#4d6b57" }}>Aydın · Efeler</div>
-        <div style={{ fontSize: 64, marginTop: 16, fontWeight: 600 }}>
+        <div style={{ fontSize: 28, color: "#4d6b57" }}>Aydın Diyetisyen</div>
+        <div style={{ fontSize: 56, marginTop: 16, fontWeight: 600 }}>
           Dyt. Buğra Öztürk
         </div>
-        <div style={{ fontSize: 32, marginTop: 20, color: "#5e6758" }}>
+        <div style={{ fontSize: 28, marginTop: 20, color: "#5e6758" }}>
           Yasaksız, kişiye özel beslenme
         </div>
       </div>

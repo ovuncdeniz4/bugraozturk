@@ -1,9 +1,10 @@
 # Mimari
 
-Tek dilli Next.js (App Router) vitrin. Veri katmanı yok; içerik ve dış linkler [`lib/site.ts`](../lib/site.ts) içindedir.
+Tek dilli Next.js (App Router) vitrin. İçerik [`lib/site.ts`](../lib/site.ts), SSS [`lib/faq.ts`](../lib/faq.ts), yazılar [`lib/blog.ts`](../lib/blog.ts) içindedir.
 
-- **Randevu:** Google Maps ofis sayfası ve yol tarifi.
-- **Sohbet:** WhatsApp (`wa.me`) varsa o; yoksa Instagram DM (`ig.me`).
-- **SEO:** `app/layout.tsx` metadata + `JsonLd` LocalBusiness/MedicalBusiness.
+- **Randevu:** WhatsApp (`NEXT_PUBLIC_WHATSAPP_NUMBER` veya `wa.me`). Numara yoksa Instagram DM.
+- **Harita:** yalnızca konum / yol tarifi; ana CTA değildir.
+- **SEO:** metadata + WebSite / Person / LocalBusiness / FAQPage şemaları.
+- **Portre:** `public/bugra-ozturk.jpg` varsa gösterilir.
 
-Yeni bir ekran eklerken mevcut klasörleri kullanın: `app/` sayfa, `components/` bölüm, `lib/` sabitler. Expo veya ayrı bir API eklemeyin.
+Yeni ekran: `app/` sayfa, `components/` bölüm, `lib/` içerik. Expo veya ayrı API eklemeyin.

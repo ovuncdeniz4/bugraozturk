@@ -2,21 +2,23 @@ import type { Metadata } from "next";
 import { Fraunces, Manrope } from "next/font/google";
 import { JsonLd } from "@/components/JsonLd";
 import "./globals.css";
-import { site } from "@/lib/site";
+import { getSiteUrl, site } from "@/lib/site";
 
 const fraunces = Fraunces({
   variable: "--font-fraunces",
   subsets: ["latin", "latin-ext"],
+  weight: ["500", "600"],
   display: "swap",
 });
 
 const manrope = Manrope({
   variable: "--font-manrope",
   subsets: ["latin", "latin-ext"],
+  weight: ["400", "500", "600"],
   display: "swap",
 });
 
-const siteUrl = process.env.NEXT_PUBLIC_SITE_URL ?? "https://bugraozturk.vercel.app";
+const siteUrl = getSiteUrl();
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
@@ -25,28 +27,23 @@ export const metadata: Metadata = {
     template: `%s | ${site.shortName}`,
   },
   description: site.description,
-  keywords: [
-    "diyetisyen",
-    "Aydın",
-    "Efeler",
-    "Buğra Öztürk",
-    "beslenme danışmanlığı",
-    "kilo yönetimi",
-    "sporcu beslenmesi",
-  ],
+  keywords: [...site.keywords],
   openGraph: {
     title: site.title,
     description: site.description,
     locale: "tr_TR",
     type: "website",
+    siteName: site.name,
+    url: siteUrl,
   },
   twitter: {
     card: "summary_large_image",
     title: site.title,
     description: site.description,
   },
-  alternates: {
-    canonical: "/",
+  robots: {
+    index: true,
+    follow: true,
   },
 };
 

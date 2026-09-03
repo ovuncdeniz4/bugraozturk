@@ -30,6 +30,12 @@ html {
   scroll-behavior: smooth;
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
 body {
   background: var(--background);
   color: var(--foreground);
@@ -42,4 +48,8 @@ body {
 
 .font-serif {
   font-family: var(--font-fraunces), Georgia, serif;
+}
+
+summary::-webkit-details-marker {
+  display: none;
 }

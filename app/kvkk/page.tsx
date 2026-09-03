@@ -2,11 +2,13 @@ import type { Metadata } from "next";
 import Link from "next/link";
 import { Footer } from "@/components/Footer";
 import { Header } from "@/components/Header";
+import { FloatingActions } from "@/components/FloatingActions";
 import { site } from "@/lib/site";
 
 export const metadata: Metadata = {
   title: "KVKK Aydınlatma",
   description: `${site.name} web sitesi aydınlatma metni.`,
+  alternates: { canonical: "/kvkk" },
 };
 
 /** Kısa KVKK sayfası — sitede form yok, yalnızca dış bağlantılar. */
@@ -24,7 +26,7 @@ export default function KvkkPage() {
         <div className="mt-8 space-y-4 text-sm leading-relaxed text-muted">
           <p>
             Bu internet sitesi {site.name} hakkında genel bilgi vermek ve
-            randevu için Google Haritalar, Instagram ve WhatsApp gibi dış
+            randevu için WhatsApp, Instagram ve Google Haritalar gibi dış
             servislere yönlendirmek amacıyla yayınlanır.
           </p>
           <p>
@@ -48,6 +50,7 @@ export default function KvkkPage() {
         </Link>
       </main>
       <Footer />
+      <FloatingActions />
     </>
   );
 }
