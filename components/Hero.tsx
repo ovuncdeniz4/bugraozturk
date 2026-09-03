@@ -1,24 +1,17 @@
 import Link from "next/link";
-import Image from "next/image";
 import { AppointmentLink } from "@/components/AppointmentLink";
-import { site } from "@/lib/site";
+import { Portrait } from "@/components/Portrait";
 import { btnPrimary, btnSecondary } from "@/lib/styles";
 
-/** İlk ekran: fotoğraf, başlık, randevu. */
+/** İlk ekran: tek büyük fotoğraf, başlık, randevu. */
 export function Hero() {
   return (
     <section className="relative overflow-hidden">
       <div className="mx-auto flex max-w-3xl flex-col items-center px-4 py-10 text-center sm:px-6 lg:py-14">
-        <div className="relative mb-6 h-64 w-52 overflow-hidden rounded-[1.75rem] border border-sand shadow-sm sm:h-80 sm:w-64">
-          <Image
-            src="/bugra-ozturk.jpg"
-            alt={`${site.name}, Aydın diyetisyen`}
-            fill
-            sizes="(max-width: 640px) 208px, 256px"
-            className="object-cover object-[center_15%]"
-            priority
-          />
-        </div>
+        <Portrait
+          className="mb-6 h-[320px] w-full max-w-md sm:h-[420px]"
+          priority
+        />
         <h1 className="font-serif text-3xl leading-tight text-sage-dark sm:text-4xl">
           Yasaksız, kişiye özel beslenme
         </h1>
