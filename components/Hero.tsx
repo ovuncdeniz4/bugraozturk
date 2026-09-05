@@ -9,7 +9,7 @@ export function Hero() {
     <section className="relative overflow-hidden">
       <div className="mx-auto grid max-w-6xl items-center gap-8 px-4 py-10 sm:px-6 lg:grid-cols-2 lg:gap-12 lg:py-16">
         <Portrait
-          className="h-[320px] w-full max-w-md justify-self-center sm:h-[400px] lg:h-[460px] lg:max-w-none"
+          className="aspect-square w-full max-w-md justify-self-center lg:max-w-none"
           priority
         />
         <div className="text-center lg:text-left">
