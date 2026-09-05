@@ -29,7 +29,7 @@ export function Portrait({
           alt={`${site.name}, Aydın diyetisyen`}
           fill
           sizes="(max-width: 768px) 100vw, 480px"
-          className="object-cover object-center"
+          className="object-cover object-center" // kare stüdyo çekimi; yüz ve masa ortada
           priority={priority}
         />
       ) : (
