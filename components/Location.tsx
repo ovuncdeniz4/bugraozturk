@@ -20,12 +20,16 @@ export function Location() {
             <span>
               {site.clinic}
               <br />
-              {site.fullAddress}
+              Cumhuriyet Mahallesi, Cumhuriyet Caddesi No:25
+              <br />
+              Kat 5, Daire 25
+              <br />
+              Efeler / Aydın
             </span>
           </p>
           <p className="mt-4 max-w-md text-sm leading-relaxed text-muted">
-            Randevu için WhatsApp’tan yazın. Yol tarifi için Google Haritalar
-            ofis sayfasını kullanabilirsiniz.
+            Randevu için WhatsApp’tan yazın. Google Haritalar kaydı henüz
+            güncellenmemiş olabilir; yol tarifi {site.mapsQuery} konumuna gider.
           </p>
           <div className="mt-6 flex flex-wrap gap-3">
             <AppointmentLink className={btnPrimary}>
