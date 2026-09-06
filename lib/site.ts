@@ -7,18 +7,22 @@ export const site = {
   title: "Aydın Diyetisyen | Dyt. Buğra Öztürk",
   description:
     "Aydın Efeler’de kişiye özel, sürdürülebilir beslenme ve diyet danışmanlığı. Kilo verme, sporcu beslenmesi ve online diyetisyen hizmetleri.",
-  clinic: "Sante Clinic",
+  clinic: "Yaşam Plaza",
   city: "Aydın",
   district: "Efeler",
-  addressLine: "Hasan Efendi Mah. 1906 Sok. No:6 Daire:1",
-  postalCode: "09100",
+  addressLine:
+    "Cumhuriyet Mahallesi, Cumhuriyet Caddesi No:25, Yaşam Plaza Kat 5, Daire 25",
+  postalCode: "09020",
   fullAddress:
-    "Hasan Efendi Mah. 1906 Sok. No:6 Daire:1, Efeler / Aydın",
-  mapsUrl: "https://maps.app.goo.gl/a7dtJbzbgJkCRKy79",
+    "Cumhuriyet Mahallesi, Cumhuriyet Caddesi No:25, Yaşam Plaza Kat 5, Daire 25, Efeler / Aydın",
+  /** Harita kaydı gecikmeli olabilir; pin binanın adres aramasına gider. */
+  mapsQuery: "Yaşam Plaza, Cumhuriyet Caddesi No:25, Efeler, Aydın",
+  mapsUrl:
+    "https://www.google.com/maps/search/?api=1&query=Ya%C5%9Fam%20Plaza%2C%20Cumhuriyet%20Caddesi%20No%3A25%2C%20Efeler%2C%20Ayd%C4%B1n",
   mapsDirectionsUrl:
-    "https://www.google.com/maps/dir/?api=1&destination=Hasan%20Efendi%20Mah.%201906%20Sok.%20No:6%20Daire:1%2C%20Efeler%2C%20Ayd%C4%B1n",
+    "https://www.google.com/maps/dir/?api=1&destination=Ya%C5%9Fam%20Plaza%2C%20Cumhuriyet%20Caddesi%20No%3A25%2C%20Efeler%2C%20Ayd%C4%B1n",
   mapsEmbedUrl:
-    "https://maps.google.com/maps?q=Hasan%20Efendi%20Mah.%201906%20Sok.%20No:6%20Daire:1%20Efeler%20Ayd%C4%B1n&z=16&output=embed",
+    "https://maps.google.com/maps?q=Ya%C5%9Fam%20Plaza%2C%20Cumhuriyet%20Caddesi%20No%3A25%2C%20Efeler%2C%20Ayd%C4%B1n&z=16&output=embed",
   instagramUrl: "https://www.instagram.com/dytbugraozturk",
   instagramHandle: "@dytbugraozturk",
   instagramMessageUrl: "https://ig.me/m/dytbugraozturk",
